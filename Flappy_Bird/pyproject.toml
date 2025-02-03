@@ -1,0 +1,17 @@
+[project]
+name = "flappy-bird"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "RenanAugusto-isgame",email = "renanaugustokwn@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pygame (>=2.6.1,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

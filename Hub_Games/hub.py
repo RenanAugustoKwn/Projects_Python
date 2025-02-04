@@ -6,7 +6,7 @@ from sys import exit
 py.init()
 
 # Configurações do jogo
-largura, altura = 500, 800
+largura, altura = 520, 800
 tamanho_celula = 20
 velocidadeSnake = 10
 
@@ -45,10 +45,10 @@ def desenhar_texto(texto, tamanho, x, y):
 def selecionar_jogo():
     while True:
         tela.fill(preto)
-        desenhar_texto("Selecione um jogo", 40, 200, 100)
-        desenhar_texto("1 - Snake", 30, 250, 200)
-        desenhar_texto("2 - Flappy Bird", 30, 250, 250)
-        desenhar_texto("3 - Pac-Man", 30, 250, 300)
+        desenhar_texto("Selecione um jogo", 40, 150, 100)
+        desenhar_texto("1 - Snake", 30, 150, 200)
+        desenhar_texto("2 - Flappy Bird", 30, 150, 250)
+        desenhar_texto("3 - Pac-Man", 30, 150, 300)
 
         py.display.update()
 
@@ -95,6 +95,7 @@ def jogar_snake():
                     direcao = (tamanho_celula, 0)
 
         nova_cabeca = (cobra[0][0] + direcao[0], cobra[0][1] + direcao[1])
+
         cobra.insert(0, nova_cabeca)
 
         if nova_cabeca == comida:
@@ -289,10 +290,12 @@ def jogar_flappy_bird():
         clock.tick(30)
 
         for event in py.event.get():
+
             if event.type == py.QUIT:
                 rodando = False
                 py.quit()
                 quit()
+                
             if event.type == py.KEYDOWN:
                 if event.key == py.K_SPACE:
                     for passaro in passaros:
@@ -307,9 +310,12 @@ def jogar_flappy_bird():
         remover_canos = []
 
         for cano in canos:
-            for i, passaro in enumerate(passaros):  
+            for i, passaro in enumerate(passaros):
+
                 if cano.colidir(passaro):
                     passaros.pop(i)
+                    rodando = False 
+
                 if not cano.passou and passaro.x > cano.x:
                     cano.passou = True
                     add_cano = True
@@ -327,8 +333,10 @@ def jogar_flappy_bird():
             canos.remove(cano)
 
         for i, passaro in enumerate(passaros):
+
             if (passaro.y + passaro.imagem.get_width()) > chao.y or passaro.y < 0:
                 passaros.pop(i)
+                rodando = False
 
         desenhar_tela(tela, passaros, canos, chao, pontos)
 

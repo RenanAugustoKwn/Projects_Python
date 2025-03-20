@@ -1,0 +1,4 @@
+# Arquivo .gitignore
+
+# Ignorar o arquivo .gguf
+.gguf

@@ -5,6 +5,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
 from ollama import Client
 from langchain.schema import Document
+import re
 
 # 🔹 Carregar variáveis de ambiente
 load_dotenv()
@@ -13,59 +14,45 @@ load_dotenv()
 client = Client(host="http://localhost:11434")
 model = "llama3.2"
 
-# 🔹 Carregar a história do arquivo
-historia_path = "Historia.txt"
 
-# 🔹 Carregar a história do arquivo
-with open(historia_path, 'r', encoding='utf-8') as file:
-    historia_texto = file.read()
-
-# 🔹 Função para dividir a história em capítulos com base no formato
-def dividir_em_capitulos(historia_texto):
-    # Lógica para dividir o texto em capítulos (exemplo simples, adaptação necessária)
-    capitulos = []
-    # Supondo que cada capítulo seja separado por um título como "Capítulo X"
-    for i, texto_capitulo in enumerate(historia_texto.split("Capítulo")):
-        if texto_capitulo.strip():  # Ignorar partes vazias
-            capitulos.append({"capitulo": f"Capítulo {i}", "texto": texto_capitulo.strip()})
+def extrair_metadados(texto):
+    padrao = re.compile(r"(Capítulo \d+): (.*?)\n(Parte \d+): (.*?)\n(.*?)(?=(\nCapítulo \d+:|\Z))", re.DOTALL)
+    
+    capitulos = {}
+    for correspondencia in padrao.finditer(texto):
+        capitulo = correspondencia.group(1)
+        parte = correspondencia.group(3)
+        texto_parte = correspondencia.group(5).strip()
+        
+        if capitulo not in capitulos:
+            capitulos[capitulo] = []
+        
+        capitulos[capitulo].append({"Parte": parte, "Texto": texto_parte})
+    
     return capitulos
 
+def processar_arquivo(caminho_arquivo):
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        texto = arquivo.read()
+    return extrair_metadados(texto)
 
-# Dividir a história em capítulos
-capitulos = dividir_em_capitulos(historia_texto)
-
-# 🔹 Dividir os capítulos em partes menores
-documentos_com_metadados = []
-
-for capitulo in capitulos:
-    texto = capitulo["texto"]
-    capitulo_nome = capitulo["capitulo"]
+def criar_documentos(caminho_arquivo):
+    capitulos = processar_arquivo(caminho_arquivo)
+    documentos = []
     
-    # Criar objetos Document para cada capítulo
-    document = Document(page_content=texto, metadata={"capitulo": capitulo_nome})
+    for capitulo, partes in capitulos.items():
+        texto_completo = "\n".join([f"{parte['Parte']}: {parte['Texto']}" for parte in partes])
+        documentos.append(Document(page_content=texto_completo, metadata={"Capítulo": capitulo}))
     
-    # Dividir o texto do capítulo em partes menores
-    text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=50)
-    partes = text_splitter.split_documents([document])  # Passando a lista de Document
-    
-    # Adicionar metadados de capítulo e parte
-    capitulo['partes'] = []  # Adiciona a chave partes para o capítulo
-    for i, parte in enumerate(partes):
-        parte.metadata["capitulo"] = capitulo_nome
-        parte.metadata["parte"] = i + 1  # Parte 1, Parte 2, etc.
-        capitulo['partes'].append(parte)  # Armazenando as partes dentro do capítulo
-        documentos_com_metadados.append(parte)
+    return documentos
 
-# Agora você pode acessar os capítulos e suas partes da seguinte forma:
-print("Capítulo Atual:", capitulos[0]['capitulo'])  # Exemplo de como acessar o capítulo
-print("Partes do Capítulo 1:")
-for parte in capitulos[0]['partes']:
-    print(parte.metadata["parte"], ":", parte.page_content[:100])  
-
+# Exemplo de uso
+caminho_arquivo = "historia.txt"  # Substitua pelo caminho do seu arquivo
+documentos = criar_documentos(caminho_arquivo)
 
 # 🔹 Criar o banco de vetores FAISS com metadados
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-vectorstore = FAISS.from_documents(documentos_com_metadados, embedding_model)
+vectorstore = FAISS.from_documents(documentos, embedding_model)
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
 # 🔹 Histórico da conversa
@@ -104,21 +91,16 @@ def avancar_historia():
     global progresso_historia
 
     # Verifica se o capítulo atual é válido
-    if progresso_historia['capitulo_atual'] >= len(capitulos):
+    if progresso_historia['capitulo_atual'] >= len(documentos):
         print("História concluída!")
         return  # Retorna se a história estiver concluída
 
     # Verifica se a parte atual é válida para o capítulo atual
-
-    print("Parte Atual: " , progresso_historia['parte_atual'])
-    print("capitulo Atual: ",progresso_historia['capitulo_atual'])
-    print("Nao sei: " , capitulos[progresso_historia['capitulo_atual']]['partes'])
-
-    if progresso_historia['parte_atual'] >= len(capitulos[progresso_historia['capitulo_atual']]['partes']):
+    if progresso_historia['parte_atual'] >= len(documentos[progresso_historia['capitulo_atual']]['partes']):
         # Se não for válida, reinicia a parte e avança para o próximo capítulo
         progresso_historia['capitulo_atual'] += 1
         progresso_historia['parte_atual'] = 0
-        if progresso_historia['capitulo_atual'] >= len(capitulos):
+        if progresso_historia['capitulo_atual'] >= len(documentos):
             print("História concluída!")
             return  # Retorna se a história estiver concluídates
 
@@ -129,16 +111,16 @@ def perguntar(questao):
     try:
         # Verifica se o índice do capítulo atual é válido
         capitulo_atual = progresso_historia['capitulo_atual']
-        if capitulo_atual >= len(capitulos):
+        if capitulo_atual >= len(documentos):
             raise IndexError("Capítulo atual fora do limite")
 
         # Verifica se o índice da parte atual é válido para o capítulo atual
         parte_atual = progresso_historia['parte_atual']
-        if parte_atual >= len(capitulos[capitulo_atual]['partes']):
+        if parte_atual >= len(documentos[capitulo_atual]['partes']):
             raise IndexError("Parte atual fora do limite")
 
         # Acessa a parte atual do capítulo
-        parte_atual = capitulos[capitulo_atual]['partes'][parte_atual]
+        parte_atual = documentos[capitulo_atual]['partes'][parte_atual]
 
         # Recupera o contexto para a pergunta
         contexto = retriever.get_relevant_documents(questao)

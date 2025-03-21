@@ -33,7 +33,7 @@ def extrair_partes(texto):
                     "capitulo": capitulo,
                     "titulo_capitulo": titulo_capitulo,
                     "parte": parte_num,
-                    "titulo_parte": titulo_parte
+                    "titulo_parte": titulo_parte,
                 }
             )
 

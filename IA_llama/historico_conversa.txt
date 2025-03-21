@@ -1,12 +1,19 @@
-Jogador: comecar
-Mestre: Bem-vindos aos reinos de Valmor! Você é um aventurero recente que recebeu uma carta do Duque Eldric, convocando-o para investigar os estranhos desaparecimentos nas vilas ao redor. Sua jornada começa em Rivenwood, uma vila quase deserta onde os moradores vivem com medo da noite. Você está agora parado na porta da vila, olhando para as casas vazias e silenciosas.
+Jogador: Olá
+Mestre: Bem-vindo ao nosso jogo de RPG de mesa! Estou emocionado em ter você na nossa aventura.
 
-Quais são seus passos?
-Jogador: Vou ir para a floresta
-Mestre: Você começa a caminhar pelas florestas ao redor da vila, procurando por qualquer sinal de vida ou pistas que possam ajudá-lo a entender o que está acontecendo com os desaparecidos. À medida que você se afasta da vila, as sombras das árvores parecem se estendem e se alargarem ao seu redor, como se estivessem tentando escondê-lo. De repente, ouvir uma voz susurrada lhe diz: "Você não deve estar aqui".
-Jogador: Vou perguntar quem é?
-Mestre: Uma figura sombria emerge das trevas, revelando um homem alto e magro, com olhos que parecem buracos negros. Ele se aproxima de você, seus passos quietos e precisos, e sussurra: "Sou o guardião da vila. E você é...?"
-Jogador: Meu nome é cleber
-Mestre: O guardião olha para você com desconfiança, seus olhos se fixando em sua face enquanto ele repete, "Você é Cleber? Não sei quem é você ou o que quer aqui, mas posso lhe garantir que a vila não está segura para ninguém".
-Jogador: muito bem estao sai daqui
-Mestre: O guardião de Rivenwood sorri amargosamente e leva uma mão fina até a sua própria têmpora, fazendo com que ele se afaste de você, enquanto continua sussurrando. "Você não está mais livre do que estaria aqui dentro da vila. As sombras são suas companheiras agora, Cleber. Elas o guiam."
+Você se encontra na vila, cercada por criaturas espectrais que emergiram da noite para atacar os moradores. A aldeia está em pânico, e é hora de agir. Você é um dos poucos sobreviventes da última batalha contra as criaturas e foi escolhido para liderar a defesa da vila.
+
+Você se aproxima do líder da vila, um homem idoso chamado Gorin. Ele está branco como uma neve e tem olhos que parecem buracos negros. Ele sussurra algo ao seu ouvido, e sua voz é como o vento frio de uma noite invernal.
+
+"Você precisa encontrar a Tumba Profanada", diz ele. "É a única maneira de derrotar as criaturas e salvar nossas vidas."
+
+Ele lhe dá um mapa antigo, que parece ter sido feito com sangue seco. O mapa mostra a direção para a tumba profanada, mas você não sabe o que encontrará lá.
+
+Você olha em volta e vê os moradores da vila fugindo para as montanhas, enquanto as criaturas espectrais continuam a atacar. Você também vê um jovem chamado Eira, que parece ser uma guerreira habilidoso, se aproximando de você com uma espada na mão.
+
+Agora é sua vez! O que você fará?
+
+1) Seguir o mapa para a Tumba Profanada
+2) ajudar os moradores da vila a fugir
+3) conversar com Eira e saber mais sobre ela
+4) Voltar ao castelo real para buscar ajuda

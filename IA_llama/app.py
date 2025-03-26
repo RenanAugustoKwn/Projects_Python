@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
 from ollama import Client
 from langchain.schema import Document
@@ -13,7 +14,7 @@ load_dotenv()
 client = Client(host="http://localhost:11434")
 model = "llama3.2"
 
-progresso_historia = {'id_historia': 0, 'capitulo_atual': 0, 'parte_atual': 1}
+progresso_historia = {'id_historia': 0, 'capitulo_atual': 0, 'parte_atual': 1, 'total_perguntas': 0}
 total_capitulos = 0
 
 def criar_documentos(caminho_arquivo):
@@ -62,9 +63,24 @@ def criar_documentos(caminho_arquivo):
     
     return documentos
 
+def criar_universo(caminho_arquivo):
+    with open(caminho_arquivo, "r", encoding="utf-8") as file:
+        texto = file.read()
+    
+    # Dividir em partes menores para melhor indexação
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+    textos_divididos = text_splitter.split_text(texto)
+    
+    # Criar objetos do tipo Document
+    documentos = [Document(page_content=chunk) for chunk in textos_divididos]
+    return documentos
+
 # 🔹 Criar documentos a partir do arquivo
-caminho_arquivo = "historia.txt"
-documentos = criar_documentos(caminho_arquivo)
+caminho_historia= "Historia.txt"
+caminho_universo = "Universo.txt"
+
+documentos = criar_documentos(caminho_historia)
+docUni = criar_universo(caminho_universo)
 
 # Exibir os resultados
 print(documentos)
@@ -74,25 +90,32 @@ if not documentos:
 
 # 🔹 Criar o banco de vetores FAISS
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+vectorstoreUniverse = FAISS.from_documents(docUni, embedding_model)
+
 vectorstore = FAISS.from_documents(documentos, embedding_model)
-retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
+
+retriever = vectorstoreUniverse.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
 # 🔹 Histórico da conversa
 historico_conversa = []
 
 # 🔹 Template de prompt
 rag_template = """
-Você é um mestre de RPG de mesa tipo D&D conduzindo uma aventura,
-Continue a história sem sair do contexto original,
-Responda apenas com uma única frase sem oferecer opções,
-Siga a narrativa, evite respostas longas e mantenha a continuidade lógica dos eventos,
-Deixe o jogador poder fazer as atividades que qerer dentro desse universo, mesmo que nao for a historia principal, seje criativa,
+Você é um mestre de RPG de mesa conduzindo uma aventura.
+Continue a história sem sair do Contexto.
+Siga a narrativa, evite respostas longas e mantenha a continuidade lógica dos eventos.
+Continue a partir de "Últimas ações:".
+Não dê alternativas para o jogador.
+Não dê opções para o jogador.
+Siga o contexto da história.
+Deixe o jogador poder fazer as atividades que qerer dentro desse universo, mesmo que nao for a historia principal, seje criativa.
 Responda com uma pergunta no final referente a proxima Ação do jogador.
 
 Capítulo Atual: {capitulo_atualtxt}
 Parte Atual: {parte_atualtxt}
 
-Contexto da história: {context}
+Contexto: {context}
 Últimas ações do jogador: {historico}
 Ação do jogador agora: {questao}
 """
@@ -105,6 +128,12 @@ def avancar_historia():
     
     print(total_capitulos)
     print(progresso_historia['capitulo_atual'])
+
+    if progresso_historia['total_perguntas'] < 5:
+        progresso_historia['total_perguntas']+=1
+        return
+    
+    progresso_historia['total_perguntas'] = 0
 
     if progresso_historia['capitulo_atual'] > total_capitulos:
         print("História concluída!")
@@ -136,7 +165,7 @@ def perguntar(questao):
         contexto = retriever.get_relevant_documents(questao)
         contexto_texto = "\n".join([doc.page_content for doc in contexto])
 
-        ultimas_interacoes = "\n".join(historico_conversa[-3:])
+        ultimas_interacoes = "\n".join(historico_conversa[-5:])
 
         mensagem = prompt.format(
             context=contexto_texto,
@@ -146,7 +175,7 @@ def perguntar(questao):
             parte_atualtxt=parte_atualSTR
         )
         
-        print(mensagem)
+        ##print(mensagem)
         resposta = client.chat(model=model, messages=[{"role": "user", "content": mensagem}])
 
         avancar_historia()

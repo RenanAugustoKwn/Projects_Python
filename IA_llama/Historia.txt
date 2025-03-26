@@ -1,56 +1,43 @@
-Capítulo 0: A Maldição da Coroa de Sangue
-Parte 1: Introducao ao jogador*
-Inicie a jornada
-Capítulo 1: O Chamado das Sombras
-Parte 1: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 2: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 3: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 4: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 5: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 6: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 7: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 8: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 9: O Pedido do Duque
-Os aventureiros são convocados pelo Duque Eldric de Valmor, que os contrata para investigar estranhos desaparecimentos nas vilas ao redor. Rumores dizem que criaturas sombrias surgem à noite, levando aldeões para as florestas.
-Parte 10: O Pedido do Duque
-Termine por completo o Capitulo.
-Parte 11: A Vila Amaldiçoada
-Ao chegarem à vila de Rivenwood, os aventureiros encontram um local quase deserto, onde os poucos moradores evitam sair de casa após o anoitecer. O líder da vila revela que a maldição começou quando um grupo de arqueólogos encontrou uma antiga tumba.
-Parte 12: O Ataque Noturno*
-Durante a noite, criaturas espectrais atacam a vila. Os aventureiros devem defender os moradores e seguir as pistas que levam à tumba profanada.
-Capítulo 2: A Tumba do Rei Esquecido
-Parte 1: As Profundezas Sombrias
-Os aventureiros entram na tumba ancestral e descobrem inscrições antigas que falam de um rei banido e uma coroa amaldiçoada.
-Parte 2: Guardiões do Passado
-A tumba é protegida por armadilhas e por espectros de antigos guerreiros. Os aventureiros devem derrotá-los e decifrar os enigmas para avançar.
-Parte 3: A Visão Profética*
-No salão principal da tumba, um espírito lhes revela que a coroa foi removida e levada para a fortaleza de um culto sombrio, o Círculo Carmesim.
-Capítulo 3: O Círculo Carmesim
-Parte 1: Rumo à Fortaleza
-Os aventureiros viajam até as montanhas onde se localiza a fortaleza do culto. No caminho, enfrentam emboscadas de cultistas e criaturas corrompidas.
-Parte 2: O Ritual Profano
-Ao chegarem, descobrem que o culto está prestes a usar a coroa para trazer de volta o Rei Esquecido, um tirano morto há séculos.
-Parte 3: O Confronto com o Sumo-Sacerdote*
-Os aventureiros enfrentam o sumo-sacerdote do culto em uma batalha feroz para impedir o ritual. No entanto, o rei começa a despertar.
-Capítulo 4: O Retorno do Rei Esquecido
-Parte 1: A Ascensão Sombria
-O Rei Esquecido desperta, mas ainda está enfraquecido. Ele foge para recuperar seu poder, deixando um rastro de destruição.
-Parte 2: A Busca pelos Artefatos
-Os aventureiros descobrem que podem selá-lo novamente com três artefatos sagrados, espalhados pelo reino.
-Parte 3: A Corrida Contra o Tempo*
-Coletando os artefatos, os aventureiros enfrentam lacaios do rei e forças do culto que tentam impedi-los.
-Capítulo 5: O Último Sacrifício
-Parte 1: A Batalha Final
-O Rei Esquecido ataca a capital do reino. Os aventureiros devem enfrentar seus exércitos de mortos e deter sua ascensão.
-Parte 2: O Selamento
-Os artefatos são usados para selar a alma do rei em sua coroa, mas a magia exige um grande sacrifício.
-Parte 3: O Legado dos Heróis*
-Se sobreviverem, os aventureiros se tornam lendas. O mundo se reergue após a ameaça, mas a coroa permanece, esperando por um novo tolo que ouse usá-la...
+Capítulo 0: O Chamado do Destino
+Parte 1: O Último Crepúsculo
+A cidade de Eldoria está em pânico: a luz do sol está desaparecendo, e a noite se alonga a cada dia. O sumo-sacerdote convoca os aventureiros e revela um antigo presságio – uma profecia perdida que fala sobre a ascensão da Noite Eterna e um artefato chamado Coração de Tenebris, supostamente selado há séculos.
+Objetivo: Investigar a causa do desaparecimento do sol e seguir as pistas sobre o artefato.
+
+Parte 2: A Vila na Penumbra
+Seguindo rumores e mapas antigos, os aventureiros chegam à Vila de Dunhollow, um local perpetuamente coberto por sombras. Moradores falam de aparições à noite e de um castelo amaldiçoado no topo da colina. Um sobrevivente menciona que estranhas figuras de manto negro foram vistas caminhando até as ruínas.
+Objetivo: Investigar a vila e descobrir a conexão entre o castelo e o desaparecimento da luz.
+
+Parte 3: O Ataque Noturno*
+Quando a noite cai, criaturas sombrias emergem das trevas, atacando a vila. Entre o caos, os aventureiros encontram um símbolo esculpido em pedra, apontando para o castelo. Os jogadores devem decidir entre defender os aldeões ou seguir os invasores até sua origem.
+Objetivo: Sobreviver ao ataque e rastrear os cultistas até o castelo amaldiçoado.
+
+Capítulo 1: O Castelo de Sombras
+Parte 1: A Torre Invertida
+O castelo de Lord Eryndor, desaparecido há séculos, se encontra em ruínas. Sua arquitetura distorcida desafia a realidade, como se estivesse virado do avesso. O ar ressoa com sussurros de outra era. Ao explorar, os aventureiros encontram diários e inscrições antigas, revelando que o castelo foi o local de um ritual fracassado para selar a Noite Eterna.
+Objetivo: Descobrir a verdade sobre o castelo e encontrar a entrada para as profundezas onde o artefato está guardado.
+
+Parte 2: Guardiões do Abismo
+Nas profundezas do castelo, os aventureiros enfrentam espectros de guerreiros antigos e armadilhas mágicas deixadas para proteger o selo. Um deles sussurra um aviso:
+"Se o coração bater novamente, a noite não terá fim."
+Aqui, os jogadores enfrentam dilemas: destruir os guardiões, buscar um pacto ou tentar compreender os enigmas?
+Objetivo: Sobreviver aos desafios da tumba e alcançar a câmara do Coração de Tenebris.
+
+Parte 3: O Sacerdote das Sombras*
+O culto da Noite Eterna já está lá. Seu líder, o Sacerdote das Sombras, prepara um novo ritual para libertar a entidade aprisionada. Os aventureiros chegam no momento crítico, onde devem tomar uma decisão final:
+Interromper o ritual à força, arriscando destruir o castelo.
+Usar o Coração de Tenebris para selar a escuridão, com possíveis consequências desconhecidas.
+Permitir que o ritual continue, acreditando que o culto tem um propósito maior.
+Objetivo: Enfrentar o sacerdote e escolher o destino do mundo.
+
+Capítulo 2: O Destino da Luz
+Parte 1: O Eclipse Final
+Se os aventureiros falharem ou escolherem mal, o sol desaparece para sempre e a Noite Eterna começa. Caso tenham sucesso, algo imprevisto acontece – talvez o selo se feche, mas com um custo inesperado.
+Objetivo: Lidar com as consequências da escolha final.
+
+Parte 2: A Aurora Perdida
+Os sobreviventes voltam a Eldoria para relatar o que aconteceu. Dependendo da escolha dos jogadores, a cidade pode estar salva, devastada, ou alterada para sempre por um novo equilíbrio entre luz e trevas.
+Objetivo: Enfrentar as consequências políticas e sociais da decisão tomada.
+
+Parte 3: O Legado dos Aventureiros*
+Se a Noite Eterna venceu, os jogadores agora devem sobreviver em um mundo sem sol, onde novos desafios começam. Se o sol foi restaurado, talvez sinais da escuridão ainda persistam – uma última visão profética pode sugerir que o mal não foi derrotado, apenas adiado.
+Objetivo: Deixar ganchos para futuras aventuras e dar um final satisfatório baseado nas escolhas.

@@ -102,22 +102,25 @@ historico_conversa = []
 
 # 🔹 Template de prompt
 rag_template = """
-Você é um mestre de RPG de mesa conduzindo uma aventura.
-Continue a história sem sair do Contexto.
-Siga a narrativa, evite respostas longas e mantenha a continuidade lógica dos eventos.
-Continue a partir de "Últimas ações:".
-Não dê alternativas para o jogador.
-Não dê opções para o jogador.
-Siga o contexto da história.
-Deixe o jogador poder fazer as atividades que qerer dentro desse universo, mesmo que nao for a historia principal, seje criativa.
-Responda com uma pergunta no final referente a proxima Ação do jogador.
+Você é um mestre de RPG de mesa conduzindo uma aventura,
+Continue a história sem sair do Contexto,
+Siga a narrativa, evite respostas longas e mantenha a continuidade lógica dos eventos e da "Pergunta ou ação:",
+Continue a partir de "Últimas ações:",
+Siga o contexto da história,
+Deixe o jogador poder fazer as atividades que querer dentro desse universo, mesmo que nao for a história principal, seje criativa,
+Responda com uma pergunta no final como "Oque você irá fazer agora?", "Qual sua proxima ação?",
+Não coloque falas para o jogador,
+Não coloque falas para o mestre,
+Não dê alternativas para o jogador,
+Não dê opções para o jogador,
+Resuma tudo em uma frase sempre que possível.
 
 Capítulo Atual: {capitulo_atualtxt}
 Parte Atual: {parte_atualtxt}
 
 Contexto: {context}
 Últimas ações do jogador: {historico}
-Ação do jogador agora: {questao}
+Pergunta ou ação: {questao}
 """
 
 prompt = ChatPromptTemplate.from_template(rag_template)
@@ -196,7 +199,7 @@ while True:
     print(f"{model}: {resposta}")
 
 # 🔹 Salvar histórico
-caminho_historico = "historico_conversa.txt"
+caminho_historico = "Historico_conversa.txt"
 with open(caminho_historico, "w", encoding="utf-8") as arquivo:
     for linha in historico_conversa:
         arquivo.write(linha + "\n")

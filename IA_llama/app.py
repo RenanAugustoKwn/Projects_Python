@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.prompts import ChatPromptTemplate
@@ -14,7 +13,7 @@ load_dotenv()
 client = Client(host="http://localhost:11434")
 model = "llama3.2"
 
-progresso_historia = {'id_historia': 0, 'capitulo_atual': 0, 'parte_atual': 0}
+progresso_historia = {'id_historia': 0, 'capitulo_atual': 0, 'parte_atual': 1}
 total_capitulos = 0
 
 def criar_documentos(caminho_arquivo):
@@ -28,9 +27,9 @@ def criar_documentos(caminho_arquivo):
 
     documentos = []
     capitulos = list(padrao_capitulo.finditer(texto))
-    total_capitulos = len(capitulos)
+    total_capitulos = len(capitulos) - 1
 
-    id_historia = 0
+    id_historia = -1
     for i, cap in enumerate(capitulos):
         capitulo = cap.group(1)
         titulo_capitulo = cap.group(2)
@@ -85,13 +84,8 @@ historico_conversa = []
 rag_template = """
 Você é um mestre de RPG de mesa tipo D&D conduzindo uma aventura,
 Continue a história sem sair do contexto original,
-Sempre termine com uma pergunta sobre a próxima ação do jogador.
 Responda apenas com uma única frase sem oferecer opções,
-Em alguns momentos voce pode fazer alguns paragrafos para ficar mais dinamico e criativo,
 Siga a narrativa, evite respostas longas e mantenha a continuidade lógica dos eventos,
-Nunca saia do contexto da história,
-Sempre termine a frase perguntando algo para o jogador,
-Responda apenas com uma única frase sem oferecer opções sem que posivel,
 Deixe o jogador poder fazer as atividades que qerer dentro desse universo, mesmo que nao for a historia principal, seje criativa,
 Responda com uma pergunta no final referente a proxima Ação do jogador.
 
@@ -108,22 +102,32 @@ prompt = ChatPromptTemplate.from_template(rag_template)
 # 🔹 Função para avançar na história
 def avancar_historia(): 
     global progresso_historia
+    
+    print(total_capitulos)
+    print(progresso_historia['capitulo_atual'])
 
-    if progresso_historia['capitulo_atual'] >= total_capitulos:
+    if progresso_historia['capitulo_atual'] > total_capitulos:
         print("História concluída!")
         return
     
     progresso_historia['parte_atual'] += 1
-    if progresso_historia['parte_atual'] >= documentos[progresso_historia['id_historia']].metadata['total_partes']:
-        progresso_historia['capitulo_atual'] += 1
-        progresso_historia['parte_atual'] = 0
 
-    if progresso_historia['capitulo_atual'] >= total_capitulos:
+    if progresso_historia['parte_atual'] > documentos[progresso_historia['id_historia']].metadata['total_partes']:
+        progresso_historia['capitulo_atual'] += 1
+        progresso_historia['parte_atual'] = 1
+
+    if progresso_historia['capitulo_atual'] > total_capitulos:
         print("História concluída!")
+        return
+    
+    
+    progresso_historia['id_historia'] += 1
+
 
 # 🔹 Função para perguntar à IA
 def perguntar(questao):
     global progresso_historia
+    print(progresso_historia)
 
     try:
         capitulo_atualSTR = documentos[progresso_historia['id_historia']].metadata['titulo_capitulo']
@@ -132,7 +136,7 @@ def perguntar(questao):
         contexto = retriever.get_relevant_documents(questao)
         contexto_texto = "\n".join([doc.page_content for doc in contexto])
 
-        ultimas_interacoes = "\n".join(historico_conversa[-8:])
+        ultimas_interacoes = "\n".join(historico_conversa[-3:])
 
         mensagem = prompt.format(
             context=contexto_texto,
@@ -144,6 +148,7 @@ def perguntar(questao):
         
         print(mensagem)
         resposta = client.chat(model=model, messages=[{"role": "user", "content": mensagem}])
+
         avancar_historia()
         
         return resposta['message']['content']

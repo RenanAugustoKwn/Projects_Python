@@ -1,46 +1,24 @@
-### Universo de "Crônicas da Noite Eterna"
+Universo de "Crônicas da Noite Eterna": Este documento detalha o cenário, mitologia, facções, povos, criaturas e locais do mundo onde se passa a campanha "Crônicas da Noite Eterna". Ele servirá como base para a IA entender e gerar eventos coerentes durante a aventura.
 
-Este documento detalha o cenário, mitologia, facções, povos, criaturas e locais do mundo onde se passa a campanha "Crônicas da Noite Eterna". Ele servirá como base para a IA entender e gerar eventos coerentes durante a aventura.
+O Mundo de Nytheris: Nytheris é um mundo vasto e misterioso, repleto de magia antiga e segredos enterrados sob as ruínas de civilizações perdidas. Seu equilíbrio depende de três forças primordiais que governam a existência: a Luz Celestial, que representa a ordem, a vida e o conhecimento; a Sombra Primordial, que simboliza a escuridão, o esquecimento e o destino inevitável; e o Crepúsculo, que busca o equilíbrio entre ambas, mantendo o ciclo da vida e da morte. Durante séculos, essas forças coexistiram em harmonia, mas a ascensão do Culto da Noite Eterna ameaça romper esse frágil equilíbrio.
 
-### O Mundo de Nytheris
+Reino de Eldoria: O Reino de Eldoria é a nação humana mais poderosa de Nytheris, conhecida por sua capital imponente, Eldoria, uma cidade cercada por muralhas douradas e adornada com catedrais majestosas. Governado pelo rei Aldebrand IV, Eldoria enfrenta tempos sombrios enquanto batalhas políticas e ameaças místicas se acumulam. Seus templos e bibliotecas são os últimos redutos do conhecimento sagrado, e sua academia arcana é o lar dos maiores estudiosos da magia. Entretanto, mesmo essa fortaleza de luz sente os avanços das trevas, e boatos sobre infiltrações do Culto da Noite Eterna aumentam a cada dia.
 
-Nytheris é um mundo vasto e misterioso, repleto de magia antiga e segredos enterrados sob as ruínas de civilizações perdidas. Seu equilíbrio depende de três forças primordiais que governam a existência: a Luz Celestial, que representa a ordem, a vida e o conhecimento; a Sombra Primordial, que simboliza a escuridão, o esquecimento e o destino inevitável; e o Crepúsculo, que busca o equilíbrio entre ambas, mantendo o ciclo da vida e da morte. Durante séculos, essas forças coexistiram em harmonia, mas a ascensão do Culto da Noite Eterna ameaça romper esse frágil equilíbrio.
+Vila de Dunhollow: Dunhollow é uma vila pequena e isolada, cercada por pântanos envoltos em um nevoeiro constante. O medo paira sobre os aldeões, pois criaturas sombrias emergem das brumas assim que o sol se põe. No passado, a vila prosperava, mas agora os poucos habitantes que restam vivem em silêncio, esperando pelo pior. A taverna local, chamada "A Última Luz", é um dos poucos locais onde os viajantes podem encontrar abrigo e informações sobre a maldição que aflige a região. Nas ruínas do Monastério da Aurora, ecoam lendas sobre segredos antigos que podem estar ligados ao despertar das trevas.
 
-### Reino de Eldoria
+Castelo de Sombras: Escondido em uma região esquecida pelo tempo, o Castelo de Sombras é um lugar onde a própria realidade é distorcida. Seus salões mudam de forma, os corredores não levam ao mesmo destino e sussurros espectrais ecoam por seus cômodos vazios. Outrora lar do feiticeiro Lord Eryndor, o castelo agora está em ruínas, mas seus salões escondem segredos sombrios. Acredita-se que dentro de suas profundezas se encontra a Tumba do Coração de Tenebris, onde um selo proibido aprisiona uma força ancestral capaz de mergulhar o mundo na Noite Eterna.
 
-O Reino de Eldoria é a nação humana mais poderosa de Nytheris, conhecida por sua capital imponente, Eldoria, uma cidade cercada por muralhas douradas e adornada com catedrais majestosas. Governado pelo rei Aldebrand IV, Eldoria enfrenta tempos sombrios enquanto batalhas políticas e ameaças místicas se acumulam. Seus templos e bibliotecas são os últimos redutos do conhecimento sagrado, e sua academia arcana é o lar dos maiores estudiosos da magia. Entretanto, mesmo essa fortaleza de luz sente os avanços das trevas, e boatos sobre infiltrações do Culto da Noite Eterna aumentam a cada dia.
+A Ordem da Luz Celestial: A Ordem da Luz Celestial é uma antiga organização dedicada à preservação do equilíbrio entre as forças da luz e da escuridão. Seus membros, monges, guerreiros e magos sagrados, treinam para impedir que as trevas dominem o mundo. O Sumo-Sacerdote Valdrin lidera a ordem, convocando heróis para enfrentar a crescente ameaça da Noite Eterna. Eles possuem templos espalhados pelo reino, mas sua influência diminui conforme o culto sombrio ganha força.
 
-### Vila de Dunhollow
+O Culto da Noite Eterna: O Culto da Noite Eterna é uma seita secreta que acredita que a humanidade deve abraçar as trevas e aceitar a eternidade na escuridão. Seu líder, conhecido apenas como o Sacerdote das Sombras, busca quebrar o selo do Coração de Tenebris para liberar o poder adormecido. Os seguidores do culto se infiltraram em diversas cidades, espalhando corrupção e medo por onde passam.
 
-Dunhollow é uma vila pequena e isolada, cercada por pântanos envoltos em um nevoeiro constante. O medo paira sobre os aldeões, pois criaturas sombrias emergem das brumas assim que o sol se põe. No passado, a vila prosperava, mas agora os poucos habitantes que restam vivem em silêncio, esperando pelo pior. A taverna local, chamada "A Última Luz", é um dos poucos locais onde os viajantes podem encontrar abrigo e informações sobre a maldição que aflige a região. Nas ruínas do Monastério da Aurora, ecoam lendas sobre segredos antigos que podem estar ligados ao despertar das trevas.
+O Coração de Tenebris: O Coração de Tenebris é um artefato proibido, selado há séculos dentro do Castelo de Sombras. Dizem que ele contém a essência pura da escuridão e que, se destruído, pode extinguir todas as sombras ou afundar o mundo na noite eterna. Poucos sabem como chegar até ele, mas sua presença ainda influencia o mundo.
 
-### Castelo de Sombras
+O Pergaminho da Aurora Perdida: O Pergaminho da Aurora Perdida é um documento sagrado que contém o único ritual capaz de restaurar a luz. No entanto, foi fragmentado e espalhado por ruínas ancestrais para evitar que caísse nas mãos erradas. A recuperação do pergaminho pode ser a última esperança para impedir o triunfo da Noite Eterna.
 
-Escondido em uma região esquecida pelo tempo, o Castelo de Sombras é um lugar onde a própria realidade é distorcida. Seus salões mudam de forma, os corredores não levam ao mesmo destino e sussurros espectrais ecoam por seus cômodos vazios. Outrora lar do feiticeiro Lord Eryndor, o castelo agora está em ruínas, mas seus salões escondem segredos sombrios. Acredita-se que dentro de suas profundezas se encontra a Tumba do Coração de Tenebris, onde um selo proibido aprisiona uma força ancestral capaz de mergulhar o mundo na Noite Eterna.
+Criaturas e Inimigos: Espectros da Noite são espíritos de antigos guerreiros que falharam em impedir a ascensão das trevas. Eles assombram templos em ruínas e caminhos esquecidos, atacando aqueles que tentam mudar o destino. As Teias Sombrias são criaturas semelhantes a aranhas feitas de pura escuridão, que se alimentam de memórias e escravizam suas vítimas. O Guardião de Tenebris, um golem sombrio criado para proteger o Coração de Tenebris, é uma ameaça intransponível, podendo apenas ser selado novamente.
 
-### A Ordem da Luz Celestial
-
-A Ordem da Luz Celestial é uma antiga organização dedicada à preservação do equilíbrio entre as forças da luz e da escuridão. Seus membros, monges, guerreiros e magos sagrados, treinam para impedir que as trevas dominem o mundo. O Sumo-Sacerdote Valdrin lidera a ordem, convocando heróis para enfrentar a crescente ameaça da Noite Eterna. Eles possuem templos espalhados pelo reino, mas sua influência diminui conforme o culto sombrio ganha força.
-
-### O Culto da Noite Eterna
-
-O Culto da Noite Eterna é uma seita secreta que acredita que a humanidade deve abraçar as trevas e aceitar a eternidade na escuridão. Seu líder, conhecido apenas como o Sacerdote das Sombras, busca quebrar o selo do Coração de Tenebris para liberar o poder adormecido. Os seguidores do culto se infiltraram em diversas cidades, espalhando corrupção e medo por onde passam.
-
-### O Coração de Tenebris
-
-O Coração de Tenebris é um artefato proibido, selado há séculos dentro do Castelo de Sombras. Dizem que ele contém a essência pura da escuridão e que, se destruído, pode extinguir todas as sombras ou afundar o mundo na noite eterna. Poucos sabem como chegar até ele, mas sua presença ainda influencia o mundo.
-
-### O Pergaminho da Aurora Perdida
-
-O Pergaminho da Aurora Perdida é um documento sagrado que contém o único ritual capaz de restaurar a luz. No entanto, foi fragmentado e espalhado por ruínas ancestrais para evitar que caísse nas mãos erradas. A recuperação do pergaminho pode ser a última esperança para impedir o triunfo da Noite Eterna.
-
-### Criaturas e Inimigos
-
-Espectros da Noite são espíritos de antigos guerreiros que falharam em impedir a ascensão das trevas. Eles assombram templos em ruínas e caminhos esquecidos, atacando aqueles que tentam mudar o destino. As Teias Sombrias são criaturas semelhantes a aranhas feitas de pura escuridão, que se alimentam de memórias e escravizam suas vítimas. O Guardião de Tenebris, um golem sombrio criado para proteger o Coração de Tenebris, é uma ameaça intransponível, podendo apenas ser selado novamente.
-
-### Profecia da Noite Eterna
-
-"Quando a última estrela cair e as sombras tomarem o céu, aqueles que desafiarem o destino terão três caminhos: Um que os leva à ruína, outro ao sacrifício, e um último que os fará esquecer quem são."
+Profecia da Noite Eterna: "Quando a última estrela cair e as sombras tomarem o céu, aqueles que desafiarem o destino terão três caminhos: Um que os leva à ruína, outro ao sacrifício, e um último que os fará esquecer quem são."
 
 A profecia, mencionada em diversos textos antigos, guia as ações do Culto da Noite Eterna e deve ser desvendada pelos jogadores para impedir a ascensão definitiva das trevas.
 

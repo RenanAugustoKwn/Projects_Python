@@ -82,7 +82,6 @@ caminho_universo = "Universo.txt"
 documentos = criar_documentos(caminho_historia)
 docUni = criar_universo(caminho_universo)
 
-# Exibir os resultados
 print(documentos)
 
 if not documentos:
@@ -95,7 +94,8 @@ vectorstoreUniverse = FAISS.from_documents(docUni, embedding_model)
 
 vectorstore = FAISS.from_documents(documentos, embedding_model)
 
-retriever = vectorstoreUniverse.as_retriever(search_type="similarity", search_kwargs={"k": 3})
+retrieverUni = vectorstoreUniverse.as_retriever(search_type="similarity", search_kwargs={"k": 3})
+retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
 # 🔹 Histórico da conversa
 historico_conversa = []
@@ -111,9 +111,9 @@ Deixe o jogador poder fazer as atividades que querer dentro desse universo, mesm
 Responda com uma pergunta no final como "Oque você irá fazer agora?", "Qual sua proxima ação?",
 Não coloque falas para o jogador,
 Não coloque falas para o mestre,
-Não dê alternativas para o jogador,
-Não dê opções para o jogador,
-Resuma tudo em uma frase sempre que possível.
+Sem opções pré-definidas,
+Deixe o jogador escolher as ações que vai tomar,
+Resuma sempre tudo em uma frase sempre que possível.
 
 Capítulo Atual: {capitulo_atualtxt}
 Parte Atual: {parte_atualtxt}
@@ -132,7 +132,7 @@ def avancar_historia():
     print(total_capitulos)
     print(progresso_historia['capitulo_atual'])
 
-    if progresso_historia['total_perguntas'] < 5:
+    if progresso_historia['total_perguntas'] < 1:
         progresso_historia['total_perguntas']+=1
         return
     
@@ -165,10 +165,13 @@ def perguntar(questao):
         capitulo_atualSTR = documentos[progresso_historia['id_historia']].metadata['titulo_capitulo']
         parte_atualSTR = documentos[progresso_historia['id_historia']].metadata['titulo_parte']
         
+
         contexto = retriever.get_relevant_documents(questao)
         contexto_texto = "\n".join([doc.page_content for doc in contexto])
 
-        ultimas_interacoes = "\n".join(historico_conversa[-5:])
+        print(contexto_texto)
+
+        ultimas_interacoes = "\n".join(historico_conversa[-10:])
 
         mensagem = prompt.format(
             context=contexto_texto,
@@ -188,7 +191,7 @@ def perguntar(questao):
         print(f"Erro: {e}")
         return "Erro ao acessar a história. Reiniciando..."
 
-print("Ativando assistente\n")
+print("Começando Aventura:\n")
 while True:
     perguntando = input("Você: ")
     if perguntando.lower() == "sair":

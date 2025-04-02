@@ -128,7 +128,7 @@ rag_templateFinal = """
 Eu sou o jogador e Você a IA é um mestre de RPG de mesa em uma aventura, continue a aventura se beseando no contexto: {context} e no historico {historico}"
 
 Siga as regras para responder me responder:
-- Continue a história a partir do histórico e da pergunta ou ação atual.
+- Finalize a história a partir do histórico
 - Responda com uma pergunta no final como "Qual sua proxima ação?"
 - Não coloque falas para o mim
 - Não coloque falas para o mestre
@@ -192,7 +192,7 @@ def perguntar(questao):
         ##contexto_texto = "\n".join([doc.page_content for doc in contexto])
         contexto_texto = documentos[progresso_historia['id_historia']].page_content
 
-        ultimas_interacoes = "\n".join(historico_conversa[-3:])
+        ultimas_interacoes = "\n".join(historico_conversa[-20:])
 
         if finalizar_historia:
             acabou+=1
@@ -215,7 +215,7 @@ def perguntar(questao):
             questao=questao)
         
 
-        if acabou >= 3:
+        if acabou >= 2:
             return
         
 
@@ -243,8 +243,8 @@ while True:
         break
 
     resposta = perguntar(perguntando)
-    historico_conversa.append(f"Jogador: {perguntando}")
-    historico_conversa.append(f"Mestre: {resposta}")
+    historico_conversa.append(f"Eu: {perguntando}")
+    historico_conversa.append(f"IA: {resposta}")
     salvar_historico()
     print(f"{model}: {resposta}")
 

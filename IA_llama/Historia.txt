@@ -9,10 +9,10 @@ Nas profundezas dos templos esquecidos, os oráculos murmuram sobre a ascensão 
 Capítulo 1: O Chamado da Aventura
 
 Parte 1: Seguindo as Pistas
-Determinado a restaurar a ordem em Eldoria, eu incio a jornada. Minha primeira parada é a Vila de Vareth, um assentamento pitoresco onde o conhecimento ancestral é preservado com zelo. Lá, encontram o sábio Mestre Ilthran, um erudito que dedicou sua vida aos mistérios dos Guardiões do Eclipse – uma ordem há muito extinta, mas cujos símbolos e ensinamentos permanecem como legado de um tempo de equilíbrio e magia.
+Determinado a restaurar a ordem em Eldoria, eu incio a jornada. Minha primeira parada é a Vila de Vareth, um assentamento pitoresco onde o conhecimento ancestral é preservado com zelo. Lá, encontram o sábio Ilthran, um erudito que dedicou sua vida aos mistérios dos Guardiões do Eclipse – uma ordem há muito extinta, mas cujos símbolos e ensinamentos permanecem como legado de um tempo de equilíbrio e magia.
 
 Parte 2: O Caminho Perigoso*
-Munidos de novos conhecimentos, eu rumo às Montanhas do Véu Gélido. Essa região inóspita, marcada por penhascos traiçoeiros e nevascas incessantes, abriga perigos que se intensificaram com o caos instaurado. Em sua travessia, enfrentam bandidos desesperados e criaturas corrompidas pela escuridão, que parecem ser atraídas pelo desequilíbrio natural. Cada obstáculo reforça a urgência de sua missão: o desaparecimento do rei faz parte de um plano sinistro arquitetado por forças obscuras.
+Munidos de novos conhecimentos, eu vou rumo às Montanhas do Véu Gélido. Essa região inóspita, marcada por penhascos traiçoeiros e nevascas incessantes, abriga perigos que se intensificaram com o caos instaurado. Em sua travessia, enfrentam bandidos desesperados e criaturas corrompidas pela escuridão, que parecem ser atraídas pelo desequilíbrio natural. Cada obstáculo reforça a urgência de sua missão: o desaparecimento do rei faz parte de um plano sinistro arquitetado por forças obscuras.
 
 Capítulo 2: A Torre da Lua Perdida
 
@@ -23,23 +23,20 @@ Parte 2: O Portal Proibido
 Explorando os corredores labirínticos da torre, desccubro um portal oculto que os transporta para o Abismo Sombrio – um reino onde o tempo se distorce e a realidade se funde com o terror. Nesse ambiente de incerteza, eles encontram a chocante verdade: o rei Althar está preso, mantido cativo por Nocthar, o Senhor das Sombras, cuja presença maligna permeia cada recanto.
 
 Parte 3: O Terrível Dilema*
-Com uma voz que ecoa como o vento entre as montanhas, Nocthar revela que Althar, em um passado arriscado, tentou selar a própria entidade que agora o aprisiona, mas falhou e foi capturado. Agora, o objetivo de Nocthar é romper o selo que o mantém contido, espalhando a escuridão por toda Eldoria. Diante desse cenário, o jogador enfrenta um dilema angustiante: lutar para libertar o rei e confrontar diretamente Nocthar em uma batalha que pode custar inúmeras vidas, ou realizar um ritual ancestral para reforçar o selo – um caminho que exigirá o sacrifício final de Althar para salvar o reino.
+Com uma voz que ecoa como o vento entre as montanhas, Nocthar revela que o rei Althar, em um passado arriscado, tentou selar a própria entidade que agora o aprisiona, mas falhou e foi capturado. Agora, o objetivo de Nocthar é romper o selo que o mantém contido, espalhando a escuridão por toda Eldoria. Diante desse cenário, eu enfrento um dilema angustiante: lutar para libertar o rei e confrontar diretamente Nocthar em uma batalha que pode custar inúmeras vidas, ou realizar um ritual ancestral para reforçar o selo – um caminho que exigirá o sacrifício final de Althar para salvar o reino.
 
 Capítulo 3: O Destino de Eldoria
 
-Parte 1: A Batalha Final
-Caso optem por enfrentar Nocthar, o jogador se para uma batalha épica. Em um confronto onde a magia se entrelaça com a coragem humana, cada feitiço e golpe é carregado pelo peso do destino de Eldoria. Em meio ao caos do combate, estratégias brilhantes e laços de fraternidade se fortalecem, enquanto a esperança de restaurar a ordem se renova a cada instante.
-
-Parte 2: O Sacrifício do Rei*
-Alternativamente, se os heróis decidirem reforçar o selo, um ritual ancestral será iniciado. Este ritual, passado de geração em geração, exige um sacrifício imenso. Com nobreza e resignação, o próprio rei Althar se oferece, ciente de que sua perda garantirá a segurança do reino. Esse ato doloroso marca o fim de uma era, mas também simboliza o renascimento de uma nova esperança para Eldoria, mesmo que sob a sombra da tristeza pela perda de um líder amado.
+Parte 1: A Batalha Final*
+Caso optem por enfrentar Nocthar, eu me preparo para uma batalha épica. Em um confronto onde a magia se entrelaça com a coragem humana, cada feitiço e golpe é carregado pelo peso do destino de Eldoria. Em meio ao caos do combate, estratégias brilhantes e laços de fraternidade se fortalecem, enquanto a esperança de restaurar a ordem se renova a cada instante. lternativamente, se os heróis decidirem reforçar o selo, um ritual ancestral será iniciado. Este ritual, passado de geração em geração, exige um sacrifício imenso. Com nobreza e resignação, o próprio rei Althar se oferece, ciente de que sua perda garantirá a segurança do reino. Esse ato doloroso marca o fim de uma era, mas também simboliza o renascimento de uma nova esperança para Eldoria, mesmo que sob a sombra da tristeza pela perda de um líder amado.
 
 Capítulo 4: O Legado do Heroi
 
 Parte 1: O Retorno Triunfante
-Independentemente da escolha feita, eu retornao à capital como verdadeiro herói. O povo, que sofreu tanto sob a opressão do desespero, celebra o retorno daqueles que ousaram desafiar o destino. Suas façanhas e sacrifícios reavivam a chama da esperança e mostram que, mesmo nas horas mais sombrias, a coragem humana pode iluminar os caminhos da redenção.
+Independentemente da escolha feita, eu retorno à capital como verdadeiro herói. O povo, que sofreu tanto sob a opressão do desespero, celebra o retorno daqueles que ousaram desafiar o destino. Suas façanhas e sacrifícios reavivam a chama da esperança e mostram que, mesmo nas horas mais sombrias, a coragem humana pode iluminar os caminhos da redenção.
 
 Parte 2: A Nova Ordem
-Se Althar for libertado, ele retoma seu trono com gratidão e sabedoria, recompensando os heróis com terras, títulos e o eterno reconhecimento da nação. Se o sacrifício se fez necessário, a princesa Elyndra assume o trono, comprometida a governar com justiça e a honrar a memória de seu pai. Sua liderança promete transformar a tragédia em um símbolo de renascimento e de um futuro mais próspero para todos.
+Se o rei Althar for libertado, ele retoma seu trono com gratidão e sabedoria, recompensando os heróis com terras, títulos e o eterno reconhecimento da nação. Se o sacrifício se fez necessário, a princesa Elyndra assume o trono, comprometida a governar com justiça e a honrar a memória de seu pai. Sua liderança promete transformar a tragédia em um símbolo de renascimento e de um futuro mais próspero para todos.
 
 Parte 3: O Mal Nunca Dorme*
 Mesmo com a vitória e a restauração da ordem, um sussurro inquietante persiste pelos ventos de Eldoria. O mal, embora temporariamente contido, jamais é completamente erradicado. As antigas maldições e energias obscuras permanecem à espreita, lembrando a todos que a paz é frágil e que, em algum momento, as sombras poderão retornar para desafiar novamente a luz.
